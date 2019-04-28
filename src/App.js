@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/header/header'
 import Footer from './components/footer/footer'
 import BookSectionPage from './components/pages/book-section'
-import BookDetail from './components/pages/book-detail'
+import BookDetailPage from './components/pages/book-detail'
 import PageNotFound from './components/pages/page-not-found'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 function App() {
@@ -16,10 +16,11 @@ function App() {
           <Route path='/books/category/:categoryName' exact
             render={(props) => {
               { console.log(props.match.params.categoryName) }
-              return <BookSectionPage categoryName={props.match.params.categoryName} />
+              let categoryName = props.match.params.categoryName
+              return <BookSectionPage categoryName={categoryName} />
             }}
           />
-          <Route path='/books/:bookID' component={BookDetail} />
+          <Route path='/books/:bookID' component={BookDetailPage} />
           <Route component={PageNotFound} />
         </Switch>
       </BrowserRouter>
