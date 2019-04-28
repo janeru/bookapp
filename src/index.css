@@ -1,0 +1,145 @@
+*{
+  padding:0px;
+  margin:0px;
+  box-sizing:border-box
+}
+
+body{
+  background-color:#ececec;
+  font-family: 'Roboto', sans-serif; 
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:0px 20px;
+}
+#header{
+  background-color:white;
+  padding:20px 0px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1)
+}
+#header ul{
+  list-style-type:none
+}
+#header a{
+  display:block;
+  padding:15px;
+  color:rgba(43,1,51);
+  text-decoration:none;
+  font-weight: bold;
+  
+}
+#header nav a:hover,
+#header nav a:focus{
+  background-color: rgba(0,0,0,.1)
+}
+
+#header nav .active a{
+  background-color: rgba(0,0,0,.1)
+}
+#header nav{
+  display:flex;
+  justify-content: space-between;
+align-items:center
+}
+
+#header .categories{
+  display:flex;
+
+}
+#header .logo{
+  font-size:2em;
+  padding:0px
+}
+
+/* book section */
+#books-section,
+#books-detail{
+margin:50px 0px;
+}
+
+.section-title{
+  padding:20px 0px
+}
+
+.books-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-gap:15px
+}
+#books-section .book{
+  box-shadow: 0px 0px 15px rgba(0,0,0,.1);
+  background-color: white
+}
+#books-section .book-img img{
+  width:100%;
+  height:200px
+}
+
+#books-section .book-info{
+  padding:10px 
+}
+
+#books-section .book-title{
+  padding-bottom:10px
+}
+
+#books-section .book-author{
+  padding-bottom:5px
+}
+
+.btn{
+  padding:15px;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  margin:10px 0px;
+  opacity:0.9
+}
+.btn:hover,
+.btn:focus{
+  opacity: 1;
+}
+.btn-highlight{
+background-color:blueviolet;
+color:white
+}
+#books-detail .book-container{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-gap:20px
+}
+#books-detail .book-title{
+padding-bottom:15px;
+}
+
+#books-detail .book-author{
+  padding-bottom:10px;
+  }
+
+  #books-detail .book-review-container{
+   display:flex;
+   font-size:1.2em;
+
+  }
+  #books-detail .book-stars{
+   color:rgb(199,199,33)
+    
+   }
+  #books-detail .book-review-container .book-review{
+    margin-left:5px
+  }
+  #footer{
+    background-color:blueviolet;
+    text-align: center;
+    color:white;
+    font-size:1.1em;
+    padding:20px;
+    margin-top:auto
+  }
+  .has-fixed-footer{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column
+  }
