@@ -1,12 +1,15 @@
 import React from 'react'
 import Book from './book'
 let BooksContainer = (props) => {
-    let books = [1, 2, 3, 4, 5]
+
+    if (props.books.length === 0) {
+
+    }
     return (
 
         <div className="books-container">
-            {books.map((book, i) => {
-                return <Book key={i} />
+            {props.books.map((book, i) => {
+                return <Book book={book} key={i} />
             })
             }
 
