@@ -31,7 +31,7 @@ let BookContainer = (props) => {
                 description={bookInfo.description}
 
             />
-            <BookReviewContainer />
+            <BookReviewContainer rating={bookInfo.rating} />
         </div>
     )
 }

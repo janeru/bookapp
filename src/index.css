@@ -8,7 +8,9 @@ body{
   background-color:#ececec;
   font-family: 'Roboto', sans-serif; 
 }
-
+.has-fixed-footer {
+  background: #ffeb3b12;
+}
 .container{
   max-width:1000px;
   margin:auto;
@@ -50,10 +52,12 @@ align-items:center
 #header .categories{
   display:flex;
 
+
 }
-#header .logo{
-  font-size:2em;
-  padding:0px
+#header .logo {
+  font-size: 2em;
+  padding: 0px;
+
 }
 
 /* book section */
@@ -73,7 +77,8 @@ margin:50px 0px;
 }
 #books-section .book{
   box-shadow: 0px 0px 15px rgba(0,0,0,.1);
-  background-color: white
+  background-color: white;
+  text-align:center
 }
 #books-section .book-img img{
   width:100%;
@@ -97,7 +102,7 @@ margin:50px 0px;
   border:none;
   outline:none;
   cursor:pointer;
-  margin:10px 0px;
+  margin:20px 0px;
   opacity:0.9;
   text-decoration: none;
   display:inline-block
@@ -107,14 +112,17 @@ margin:50px 0px;
   opacity: 1;
 }
 .btn-highlight{
-background-color:blueviolet;
+background-color:#607D8B;
 color:white
 }
-#books-detail .book-container{
+#books-detail .container{
+  padding-top:80px
+}
+/* #books-detail .book-container{
   display: grid;
   grid-template-columns:1fr 1fr 1fr;
   grid-gap:20px
-}
+} */
 #books-detail .book-title{
 padding-bottom:15px;
 }
@@ -128,19 +136,15 @@ padding-bottom:15px;
   } 
 
   #books-detail .book-review-container{
-   display:flex;
    font-size:1.2em;
-
+  
   }
   #books-detail .book-stars{
-   color:rgb(199,199,33)
-    
+   color:rgb(199,199,33);
    }
-  #books-detail .book-review-container .book-review{
-    margin-left:5px
-  }
+ 
   #footer{
-    background-color:blueviolet;
+    background-color:skyblue;
     text-align: center;
     color:white;
     font-size:1.1em;
@@ -154,10 +158,11 @@ padding-bottom:15px;
   }
 
   .loader {
-    margin:50px auto;
+    
+    margin:200px auto;
     text-align:center;
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border-top: 10px solid black; /* black */
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -171,6 +176,17 @@ padding-bottom:15px;
   i.anticon.anticon-bars {
     display:none
 }
+.imgName{
+  padding-top:100px;
+  text-align: center
+  }
+  .imgName img{
+    width:100%;
+    height:600px;
+    
+  }
+
+
   @media only screen and (max-width:768px){
     .books-container{
       display: grid;
@@ -182,8 +198,13 @@ padding-bottom:15px;
     }
     #books-section .book-img img{
       width:100%;
-height:250px
+height:250px;
+
+padding: 0px 30px;
     }
+    #header .logo {
+     display:none
+   }
   }
   @media only screen and (max-width:540px){
     .books-container{
@@ -210,13 +231,19 @@ height:250px
     right: 0;
     top:0
 }
-
-#header .logo {
-  font-size: 2em;
-  padding: 0px;
-  position: absolute;
-  right: 40px;
+.imgName{
+text-align: center
 }
+.imgName img{
+  max-width:320px;
+  height:400px;
+
+          
+}
+
+
   }
 
+  
  
+  

@@ -2,20 +2,30 @@ import React from 'react';
 import { NavLink } from 'react-router-dom'
 import { Icon } from 'antd';
 import 'antd/dist/antd.css';
-
-
+import $ from 'jquery';
 let header = (props) => {
     let openCategoryList = (e) => {
+        console.log(window.buttonList)
+        window.buttonList = !window.buttonList
+        console.log(window.buttonList)
+        if (window.buttonList) {
+            if (window.innerWidth >= 768) {
+                document.querySelector('.categories').style.display = "flex"
+                $(".categories").slideUp("slow")
+                // document.querySelector('.categories').style.display = "flex"
+                document.querySelector('.logo').style.display = "block"
+                document.querySelector('.iconBar').style.display = "none"
+            } else {
+                // document.querySelector('.categories').style.display = "none"
+                console.log($(".categories"))
+                $(".categories").slideDown("slow")
+                document.querySelector('.iconBar').style.display = "block"
+            }
 
-        console.log(document.querySelector('.categories').style.display)
-        if (document.querySelector('.categories').style.display === "block") {
-            document.querySelector('.categories').style.display = "none"
-            document.querySelector('.logo').style.display = "block"
-            document.querySelector('.iconBar').style.display = "block"
 
         } else {
-            document.querySelector('.categories').style.display = "block"
-            document.querySelector('.logo').style.display = "none"
+            $(".categories").slideUp("slow")
+
 
         }
     }

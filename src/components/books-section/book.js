@@ -16,7 +16,7 @@ let Book = (props) => {
     return (
         <div className="book">
             {/* <!-- 相片 --> */}
-            <div className="book-img">
+            <div className="book-img animated zoomIn	slower">
                 <img src={bookInfo.image} alt="" />
             </div>
             <div className="book-info">
@@ -29,7 +29,7 @@ let Book = (props) => {
                     <p>By <em>{bookInfo.author}</em></p>
                 </div>
                 <div className="book-call-to-action">
-                    <NavLink to={"/book/" + bookInfo.id} className="btn btn-highlight">Detail</NavLink>
+                    <NavLink to={"/book/" + bookInfo.id} className="btn btn-highlight">More Info...</NavLink>
 
                 </div>
             </div>
